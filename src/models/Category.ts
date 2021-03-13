@@ -1,11 +1,10 @@
-class Category {
-  id: string;
+import { Column, Entity } from 'typeorm';
+import ModelBase from './ModelBase';
 
+@Entity('categories')
+class Category extends ModelBase {
+  @Column()
   title: string;
-
-  created_at: Date;
-
-  updated_at: Date;
 }
 
 export default Category;
